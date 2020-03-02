@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body><title>Temperature Converter</title>
+            
+            
+            <h1>Temperature Converter</h1>
+            <p>Conevrting from Kelvin to Celsius:</p>
+            
+            <p>
+              <label>Kelvin Temp</label>
+              <input id="inputKelvin" type="number" 
+              placeholder="Kelvin" oninput="temperatureConverter(this.value)" 
+              onchange="temperatureConverter(this.value)">
+            </p>
+            <p>Celsius: <span id="outputCelcius"></span></p>
+            
+            <script>
+            function temperatureConverter(kval) {
+              kval = parseFloat(kval);
+              document.getElementById("outputCelcius").innerHTML=kval-273.15;
+            }
+            </script>
+            
+</body>
+</head>
+  </html>
